@@ -5,13 +5,14 @@ $user_id = $_POST["user_id"];
 $user_name = $_POST["user_name"];
 $user_pass = $_POST["user_pass"];
 
+# データベースに接続する
 $dsn = "mysql:dbname=users;host=localhost;charset=utf8mb4";
 $user = "root";
 $pass = "root";
 $pdo = new PDO($dsn, $user, $pass);
-
 // var_dump($pdo);
 
+# SELECT文を実行
 $sql = "select id, name, password from user order by id";
 
 $st = $pdo->query($sql);
@@ -42,7 +43,11 @@ $users = $st->fetchAll();
       <tr>
         <td><?= htmlspecialchars($user["id"]); ?></td>
         <td><?= htmlspecialchars($user["name"]); ?></td>
-        <td><a href="edit.php">EDIT</a></td>
+        <!-- EDITリンククリック 
+        リクエストパラメーターにIDを付与して、UserEdit画面を開く -->
+        <form action="edit.php" method="post">
+          <td><a href="edit.php" name="user_edit">EDIT</a></td>
+        </form>
       </tr>
     <?php } ?>
   </table>
