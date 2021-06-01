@@ -17,12 +17,12 @@ $pdo = new_pdo();
 # SELECT文を実行
 // ユーザ一覧画面から取得したユーザID(主キー)で検索、
 // 1行取得select文の検索結果の期待値は1件
-$sql = "select * from user where id = ?";
+$sql = "select * from user where id = :id";
 
 $ps = $pdo->prepare($sql);
 
 $id = $user_id;
-$ps->bindValue(1, $id, PDO::PARAM_INT);
+$ps->bindValue(":id", $id, PDO::PARAM_INT);
 
 # User Edit(編集画面)を表示する (PDOStatement インスタンスを生成)
 $ps->execute();

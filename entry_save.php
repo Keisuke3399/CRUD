@@ -34,6 +34,7 @@ $ps = $pdo->prepare($sql);
 $id = $user_id;
 $name = "$user_name";
 $password = "$user_pass";
+
 $ps->bindValue(":id", $id, PDO::PARAM_INT);
 $ps->bindValue(":name", $name, PDO::PARAM_STR);
 $ps->bindValue(":password", $password, PDO::PARAM_STR);
