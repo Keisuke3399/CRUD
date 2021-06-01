@@ -12,15 +12,15 @@
   <form action="entry_save.php" method="post">
     <p>
     <label for="id">ID</label>
-    <input type="text" name="user_id" id="">
+    <input type="text" name="user_id">
     </p>
-    <P>
+    <p>
       <label for="name">NAME</label>
-      <input type="text" name="user_name" id="">
-    </P>
+      <input type="text" name="user_name">
+    </p>
     <p>
       <label for="password">PASSWORD</label>
-      <input type="password" name="user_pass" id="">
+      <input type="password" name="user_pass">
     </p>
     <p>
       <input type="submit" name="save" value="SAVE">
