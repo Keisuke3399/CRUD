@@ -11,8 +11,8 @@
   <hr>
   <form action="entry_save.php" method="post">
     <p>
-    <label for="id">ID</label>
-    <input type="text" name="user_id">
+      <label for="id">ID</label>
+      <input type="text" name="user_id">
     </p>
     <p>
       <label for="name">NAME</label>

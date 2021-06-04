@@ -1,11 +1,11 @@
 <?php
+require_once("my_functions.php");
 
 // User Edit(編集画面)に初期表示を作成する
 
 # ユーザ一覧画面から付与されたGETクエリパラメータを取得
 $user_id = $_GET["user_id"];
 
-require_once("my_functions.php");
 # データベースに接続する (PDO インスタンスを生成)
 // $dsn = "mysql:dbname=users;host=localhost;charset=utf8mb4";
 // $user = "root";

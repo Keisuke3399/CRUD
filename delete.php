@@ -1,8 +1,7 @@
 <?php
+require_once("my_functions.php");
 
 $user_id = $_GET["user_id"];
-
-require_once("my_functions.php");
 // $dsn = "mysql:dbname=users;host=localhost;charset=utf8mb4";
 // $user = "root";
 // $pass = "root";

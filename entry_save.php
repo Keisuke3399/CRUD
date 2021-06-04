@@ -1,4 +1,5 @@
 <?php
+require_once("my_functions.php");
 
 # リクエストパラメータを取得
 # 入力したユーザIDと名前とパスワードを格納
@@ -10,7 +11,6 @@ $user_pass = $_POST["user_pass"];
 // var_dump($user_pass);
 // die("debug1");
 
-require_once("my_functions.php");
 # データベースに接続する
 // $dsn = "mysql:dbname=users;host=localhost;charset=utf8mb4";
 // $user = "root";
